@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>CodeSharEditor</title>
+
+        <style>
+                    #editor
+                     {
+                   
+                    width: 100%;
+                    height:700px;
+                    
+                  
+                     }
+                     
+
+                     #btn{
+                         
+                           background: #575ed8;
+                         color: #fff;
+                         font-size: 18px;
+                         
+                         width: 100%;
+                         border-radius: 0 0 2px 2px;
+                     }
+                     #msg{
+                        display: none;
+                     }
+
+                    
+
+
+        </style>
+
+         <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+        
+         <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+       
+        
+
+    </head>
+<body>
+ <div id="msg"></div>
+  <div id="editor"></div>
+  <script type="text/javascript">
+
+    var redirect=window.location.hostname;
+    console.log(redirect);
+    var randm=window.location.pathname;
+    console.log(randm);
+
+
+    sessionStorage.setItem("msg",randm);
+    
+    
+   // location.replace('http://'+redirect);
+
+</script> 
+ 
+
+  <button onclick="update()" id="btn">save</button>
+
+  
+
+
+
+<script src="firebase.js"></script>
+</body>
+</html>
